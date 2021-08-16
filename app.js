@@ -18,8 +18,12 @@ app.set('view engine', 'jade');
 // app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+router.get('/', function(req, res, next) {
+  // const testvar = process.env.TESTVAR;
+  res.send({ hello: "world" });
+});
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
